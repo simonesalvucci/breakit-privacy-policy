@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How BreakIt processes webpage content locally, its permissions, and its privacy practices.">
+  <title>BreakIt Privacy Policy</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #20242b; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-size: 1rem; line-height: 1.7; }
+    main { max-width: 46rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; overflow-wrap: anywhere; }
+    h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -0.025em; }
+    h2 { font-size: 1.25rem; line-height: 1.35; margin: 2rem 0 0.75rem; }
+    p, ul { margin: 0 0 1rem; }
+    ul { padding-left: 1.5rem; }
+    a { color: #174ea6; text-underline-offset: 0.2em; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+    .updated { color: #535b65; }
+    @media print { main { max-width: none; padding: 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>BreakIt Privacy Policy</h1>
+    <p class="updated">Last updated: September 9, 2026. Applies to BreakIt v0.1.0.</p>
+    <h2>What BreakIt does</h2>
+    <p>BreakIt is a Chrome extension for testing interface durability with text expansion, pseudo-localization, right-to-left (RTL) direction, and suspected overflow highlighting. See how your UI breaks before your users do.</p>
+    <p>All extension processing runs locally in your browser. BreakIt starts working on the current webpage when you open the extension. While stress modes are active, it can continue processing new or updated page content after the popup closes, until you reset the page or reload or navigate away.</p>
+    <h2>Data handling</h2>
+    <p>BreakIt reads visible DOM text and element geometry to apply UI stress tests and identify potential layout failures. Original text, DOM node references, active settings, and layout measurements are held temporarily in page-local memory to support testing and Reset. Only settings and the potential issue count are returned to the extension popup inside Chrome; page text is not returned to the popup.</p>
+    <p>BreakIt does not collect browsing history, page text, personal information, or usage data for persistent storage or transmission. No page contents or other information are sent by the extension to the developer or anyone else. There is no analytics, telemetry, account, cloud storage, remote code, or external service. The extension makes no network requests and uses no cookies or persistent extension storage.</p>
+    <p>Reset clears retained original text and removes injected styles and highlights, while preserving newer text edits made by the website. Reset also rescans the page to update the potential issue count; it does not unload the bundled page logic. Reloading or navigating away discards page-local state.</p>
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>activeTab</strong> grants temporary access to the tab where you invoke BreakIt.</li>
+      <li><strong>scripting</strong> allows BreakIt to run its bundled page logic in that tab.</li>
+    </ul>
+    <p>No broad host permissions are requested. Access to local demo files requires you to enable Chrome&#x27;s separate file URL access setting.</p>
+    <h2>Websites you test</h2>
+    <p>BreakIt does not submit forms or intentionally modify application data. It temporarily changes rendered DOM content. The website&#x27;s own scripts may independently observe those changes and react to or transmit them under that website&#x27;s own privacy practices. BreakIt does not control those scripts; the website&#x27;s own privacy policy applies to its activity.</p>
+    <h2>This policy page</h2>
+    <p>The extension&#x27;s local-only behavior is separate from visiting this policy on a website. Loading the hosted policy page requires a normal web request to its hosting provider, which may process request information under its own privacy policy. This page includes no scripts, analytics, tracking pixels, or third-party embedded resources.</p>
+    <h2>Contact and support</h2>
+    <p>Contact/support: [Publisher to add a monitored support email address or public support URL before publication.]</p>
+  </main>
+</body>
+</html>
